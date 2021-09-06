@@ -26,8 +26,8 @@ ship_row = random_row(board)
 ship_col = random_column(board)
 
 # code to prompt user to guess row and allow input
-guess_row = int(input("Guess row: "))
-guess_column = int(input("Guess column: "))
+guess_row = int(input("Guess row (maximum is 5): "))
+guess_column = int(input("Guess column (maximum is 5): "))
 
 print(ship_row)
 print(ship_col)
@@ -39,3 +39,4 @@ else:
     print("Nice try! You missed my battleship!")
     board[guess_row][guess_column] = "X"
     print_board(board)
+    
