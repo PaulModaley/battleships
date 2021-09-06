@@ -22,3 +22,4 @@ ship_col = random_column(board)
 
 #code to prompt user to guess row and allow input
 guess_row = int(input("Guess row: "))
+guess_column = int(input("Guess column: "))
