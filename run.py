@@ -78,3 +78,11 @@ computer_guess_column = randint(0, 5)
 print("Computer guessed:")
 print(computer_guess_row)
 print(computer_guess_column)
+
+#outcome of computer's guess
+if computer_guess_row == player_row and computer_guess_column == player_col:
+    print("Ha ha! Bow to me, human! I sunk your battleship")
+else:
+    print("You're lucky I missed, human!")
+    board[computer_guess_row][computer_guess_column] = "!"
+    print_board(player_board)
