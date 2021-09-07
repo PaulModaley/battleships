@@ -1,5 +1,11 @@
 from random import randint
 
+#welcome message
+print("Welcome. Let's play battleships.")
+username = input("What is your name?")
+print("Username is: " + username)
+
+
 # set up game board
 print("Computer")
 board = []
@@ -15,8 +21,8 @@ def print_board(board):
 print_board(board)
 
 
-#set up human player board
-print("You")
+#set up human player board and add battleships to player board
+print(username)
 player_board = []
 
 for x in range(5):
@@ -25,6 +31,17 @@ for x in range(5):
 def print_board(player_board):
     for i in player_board:
         print((" ").join(i))
+
+def random_row(player_board):
+    return randint(0, len(player_board) - 1)
+
+def random_column(player_board):
+    return randint(0, len(player_board) - 1)
+
+player_row = random_row(board)
+player_col = random_column(board)
+
+player_board[player_col][player_row] = "@"        
 
 print_board(player_board)
 
@@ -39,16 +56,6 @@ def random_column(board):
 
 ship_row = random_row(board)
 ship_col = random_column(board)
-
-#code to add battleships to player board
-def random_row(player_board):
-    return randint(0, len(player_board) - 1)
-
-def random_column(player_board):
-    return randint(0, len(player_board) - 1)
-
-player_row = random_row(board)
-player_col = random_column(board)
 
 # code to prompt user to guess row and allow input
 guess_row = int(input("Guess row (maximum is 5): "))
@@ -66,8 +73,8 @@ else:
     print_board(board)
 
 #code to enable computer guess
-computer_guess_row = randint
-computer_guess_column = randint
+computer_guess_row = randint(0, 5)
+computer_guess_column = randint(0, 5)
 print("Computer guessed:")
 print(computer_guess_row)
 print(computer_guess_column)
