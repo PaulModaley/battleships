@@ -64,4 +64,10 @@ else:
     print("Nice try! You missed my battleship!")
     board[guess_row][guess_column] = "X"
     print_board(board)
-    
+
+#code to enable computer guess
+computer_guess_row = randint
+computer_guess_column = randint
+print("Computer guessed:")
+print(computer_guess_row)
+print(computer_guess_column)
