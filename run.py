@@ -1,7 +1,7 @@
 from random import randint
 
 #welcome message
-print("Welcome. Let's play battleships.")
+print("Welcome to Battleships.")
 username = input("What is your name?")
 print("Username is: " + username)
 
@@ -61,8 +61,7 @@ ship_col = random_column(board)
 guess_row = int(input("Guess row (maximum is 5): "))
 guess_column = int(input("Guess column (maximum is 5): "))
 
-print(ship_row)
-print(ship_col)
+print(f"My ship was at {ship_row, ship_col}.")
 
 # outcome of user's guess
 if guess_row == ship_row and guess_column == ship_col:
@@ -75,14 +74,12 @@ else:
 #code to enable computer guess
 computer_guess_row = randint(0, 5)
 computer_guess_column = randint(0, 5)
-print("Computer guessed:")
-print(computer_guess_row)
-print(computer_guess_column)
+print(f"Computer guessed: {computer_guess_row, computer_guess_column}")
 
 #outcome of computer's guess
 if computer_guess_row == player_row and computer_guess_column == player_col:
     print("Ha ha! Bow to me, human! I sunk your battleship")
 else:
     print("You're lucky I missed, human!")
-    board[computer_guess_row][computer_guess_column] = "!"
+    board[computer_guess_row][computer_guess_column] = print("!")
     print_board(player_board)
