@@ -2,7 +2,7 @@ from random import randint
 
 #welcome message
 print("Welcome to Battleships.")
-username = input("What is your name?")
+username = input("What is your name? ")
 print("Username is: " + username)
 
 
