@@ -59,8 +59,8 @@ ship_col = random_column(board)
 
 #turns
 for turn in range(9):
-    guess_row = int(input("Guess row (maximum is 5): "))
-    guess_column = int(input("Guess column (maximum is 5): "))
+    guess_row = int(input("Guess row (Enter number 0-4): "))
+    guess_column = int(input("Guess column (Enter number 0-4): "))
         
     if guess_row == ship_row and guess_column == ship_col:
         print("Direct hit! You sank my battleship!")
