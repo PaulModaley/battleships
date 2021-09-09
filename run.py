@@ -57,29 +57,30 @@ def random_column(board):
 ship_row = random_row(board)
 ship_col = random_column(board)
 
-# code to prompt user to guess row and allow input
-guess_row = int(input("Guess row (maximum is 5): "))
-guess_column = int(input("Guess column (maximum is 5): "))
-
-print(f"My ship was at {ship_row, ship_col}.")
-
-# outcome of user's guess
-if guess_row == ship_row and guess_column == ship_col:
-    print("Direct hit! You sank my battleship!")
-else:
-    print("Nice try! You missed my battleship!")
-    board[guess_row][guess_column] = "X"
-    print_board(board)
+#turns
+for turn in range(9):
+    guess_row = int(input("Guess row (maximum is 5): "))
+    guess_column = int(input("Guess column (maximum is 5): "))
+        
+    if guess_row == ship_row and guess_column == ship_col:
+        print("Direct hit! You sank my battleship!")
+    else:
+        print("Nice try! You missed my battleship!")
+        print(f"My ship was at {ship_row, ship_col}.")
+        board[guess_row][guess_column] = "X"
+        print_board(board)
 
 #code to enable computer guess
-computer_guess_row = randint(0, 5)
-computer_guess_column = randint(0, 5)
-print(f"Computer guessed: {computer_guess_row, computer_guess_column}")
+    computer_guess_row = randint(0, 5)
+    computer_guess_column = randint(0, 5)
+    print(f"Computer guessed: {computer_guess_row, computer_guess_column}")
 
 #outcome of computer's guess
-if computer_guess_row == player_row and computer_guess_column == player_col:
-    print("Ha ha! Bow to me, human! I sunk your battleship")
-else:
-    print("You're lucky I missed, human!")
-    board[computer_guess_row][computer_guess_column] = print("!")
-    print_board(player_board)
+    if computer_guess_row == player_row and computer_guess_column == player_col:
+        print("Ha ha! Bow to me, human! I sunk your battleship")
+    else:
+        print("You're lucky I missed, human!")
+    if turn == 8:
+        print("Game Over")
+    turn =+ 1
+    
