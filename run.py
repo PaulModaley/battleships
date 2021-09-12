@@ -1,24 +1,25 @@
 from random import randint
+import logging
 
 # welcome message
 print("Welcome to Battleships.")
 username = input("What is your name? ")
-print("Username is: " + username)
+# print("Username is: " + username)
 
 # set up game board
-print("Computer")
+# print("Computer")
 board = []
 
 for x in range(5):
     board.append(["O"] * 5)
 
 
-def print_board(board):
+def print_computer_board(board):
     for i in board:
         print((" ").join(i))
 
 
-print_board(board)
+# print_computer_board(board)
 
 # scoring
 your_score = 0
@@ -53,27 +54,33 @@ player_col = random_column(board)
 
 player_board[player_col][player_row] = "@"
 
-print_board(player_board)
-print(score_message)
+# print_board(player_board)
+# print(score_message)
 
 # code to add battleships to computer board
-
-
-def random_row(board):
-    return randint(0, len(board) - 1)
-
-
-def random_column(board):
-    return randint(0, len(board) - 1)
-
-
 ship_row = random_row(board)
 ship_col = random_column(board)
 
 # code to count number of turns, invite user input and give outcomes
 for turn in range(9):
-    guess_row = int(input("Guess row (Enter number 0-4): "))
-    guess_column = int(input("Guess column (Enter number 0-4): "))
+    print("Computer")
+    print_computer_board(board)
+    print("Username is: " + username)
+    print_board(player_board)
+    print(score_message)
+    while True:
+        try:
+            guess_row = int(input("Guess row (Enter number 0-4): "))
+            guess_column = int(input("Guess column (Enter number 0-4): "))
+            if guess_row in [0, 1, 2, 3, 4] \
+                and guess_column in [0, 1, 2, 3, 4]:
+                break
+            else:
+                print("Invalid input\n")
+        except Exception as ex:
+            print("Invalid input\n")
+            logging.info(ex)
+            continue
 
     if guess_row == ship_row and guess_column == ship_col:
         print("Direct hit! You sank my battleship!")
