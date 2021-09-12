@@ -52,7 +52,7 @@ def random_column(player_board):
 player_row = random_row(board)
 player_col = random_column(board)
 
-player_board[player_col][player_row] = "@"
+player_board[player_row][player_col] = "@"
 
 # print_board(player_board)
 # print(score_message)
@@ -61,7 +61,7 @@ player_board[player_col][player_row] = "@"
 ship_row = random_row(board)
 ship_col = random_column(board)
 
-# code to count number of turns, invite user input and give outcomes
+# code to count number of turns, invite user input, validate user input and give outcomes
 for turn in range(9):
     print("Computer")
     print_computer_board(board)
@@ -70,10 +70,12 @@ for turn in range(9):
     print(score_message)
     while True:
         try:
-            guess_row = int(input("Guess row (Enter number 0-4): "))
-            guess_column = int(input("Guess column (Enter number 0-4): "))
-            if guess_row in [0, 1, 2, 3, 4] \
-                and guess_column in [0, 1, 2, 3, 4]:
+            guess_row = int(input("Guess row (Enter number 1-5): "))
+            guess_column = int(input("Guess column (Enter number 1-5): "))
+            if guess_row in [1, 2, 3, 4, 5] \
+                and guess_column in [1, 2, 3, 4, 5]:
+                guess_row = guess_row - 1
+                guess_column = guess_column - 1
                 break
             else:
                 print("Invalid input\n")
@@ -86,13 +88,10 @@ for turn in range(9):
         print("Direct hit! You sank my battleship!")
         your_score += 1
         print(score_message)
-    elif guess_row > 4 or guess_column > 4:
-        print("Are you kidding? Guess must be 0-4.")
-        guess_row = int(input("Guess row (Enter number 0-4): "))
-        guess_column = int(input("Guess column (Enter number 0-4): "))
     else:
         print("Nice try! You missed my battleship!")
-        print(f"My ship was at {ship_row, ship_col}.")
+        board[guess_row][guess_column] = "X"
+        # print(f"My ship was at {ship_row, ship_col}.")
 
     # code to enable computer guess
     computer_guess_row = randint(0, 5)
