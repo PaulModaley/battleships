@@ -20,6 +20,12 @@ def print_board(board):
 
 print_board(board)
 
+# scoring
+your_score = 0
+
+comp_score = 0
+score_message = (f"Your score: {your_score} " f" Computer's score: {comp_score} ")
+
 
 # set up human player board and add battleships to player board
 print(username)
@@ -48,6 +54,7 @@ player_col = random_column(board)
 player_board[player_col][player_row] = "@"
 
 print_board(player_board)
+print(score_message)
 
 # code to add battleships to computer board
 
@@ -70,6 +77,8 @@ for turn in range(9):
 
     if guess_row == ship_row and guess_column == ship_col:
         print("Direct hit! You sank my battleship!")
+        your_score += 1
+        print(score_message)
     elif guess_row > 4 or guess_column > 4:
         print("Are you kidding? Guess must be 0-4.")
         guess_row = int(input("Guess row (Enter number 0-4): "))
@@ -86,6 +95,8 @@ for turn in range(9):
     # outcome of computer's guess
     if computer_guess_row == player_row and computer_guess_column == player_col:
         print("Ha ha! Bow to me, human! I sunk your battleship")
+        comp_score += 1
+        print(score_message)
     else:
         print("You're lucky I missed, human!")
     if turn == 8:
