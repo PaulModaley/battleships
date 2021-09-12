@@ -14,17 +14,17 @@ Based on the traditional pencil and paper game, this version is a Python termina
       - User Expectation
   - 1.2 How to Play
 
-- 2. [Features](##2. Features)
+- 2. [Features](##2.Features)
      - Existing features
      - Future features
 
-- 3. [Technologies Used](##3. Technologies Used)
+- 3. [Technologies Used](##3.Technologies Used)
 
-- 4. [Testing](##4. Testing)
+- 4. [Testing](##4.Testing)
 
-- 5. [Development Cycle](##5. Development Cycle)
+- 5. [Development Cycle](##5.Development Cycle)
 
-- 6. [Deployment](##6. Deployment)
+- 6. [Deployment](##6.Deployment)
 
 - 7. [End Product](##End Product)
 
