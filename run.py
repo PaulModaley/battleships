@@ -57,19 +57,21 @@ def random_column(board):
 ship_row = random_row(board)
 ship_col = random_column(board)
 
-#turns
+#code to count number of turns and invite user input and give outcome
 for turn in range(9):
     guess_row = int(input("Guess row (Enter number 0-4): "))
     guess_column = int(input("Guess column (Enter number 0-4): "))
         
     if guess_row == ship_row and guess_column == ship_col:
         print("Direct hit! You sank my battleship!")
+    elif guess_row > 4 or guess_column > 4:
+        print("Are you kidding? Guess must be 0-4.")
+        guess_row = int(input("Guess row (Enter number 0-4): "))
+        guess_column = int(input("Guess column (Enter number 0-4): "))
     else:
         print("Nice try! You missed my battleship!")
         print(f"My ship was at {ship_row, ship_col}.")
-        board[guess_row][guess_column] = "X"
-        print_board(board)
-
+        
 #code to enable computer guess
     computer_guess_row = randint(0, 5)
     computer_guess_column = randint(0, 5)
