@@ -47,18 +47,19 @@ def random_row(player_board):
 def random_column(player_board):
     return randint(0, len(player_board) - 1)
 
+for x in range(3):
+    player_row = random_row(board)
+    player_col = random_column(board)
 
-player_row = random_row(board)
-player_col = random_column(board)
-
-player_board[player_row][player_col] = "@"
+    player_board[player_row][player_col] = "@"
 
 # print_board(player_board)
 # print(score_message)
 
 # code to add battleships to computer board
-ship_row = random_row(board)
-ship_col = random_column(board)
+for x in range(3):
+    ship_row = random_row(board)
+    ship_col = random_column(board)
 
 # code to count number of turns, invite user input, validate user input and give outcomes
 for turn in range(9):
