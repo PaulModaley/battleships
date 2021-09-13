@@ -29,7 +29,6 @@ score_message = (f"Your score: {your_score} " f" Computer's score: {comp_score} 
 
 
 # set up human player board and add battleships to player board
-print(username)
 player_board = []
 
 for x in range(5):
@@ -65,7 +64,7 @@ ship_col = random_column(board)
 for turn in range(9):
     print("Computer")
     print_computer_board(board)
-    print("Username is: " + username)
+    print(username)
     print_board(player_board)
     print(score_message)
     while True:
