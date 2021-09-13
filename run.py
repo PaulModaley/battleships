@@ -101,6 +101,7 @@ for turn in range(9):
     # outcome of computer's guess
     if computer_guess_row == player_row and computer_guess_column == player_col:
         print("Ha ha! Bow to me, human! I sunk your battleship")
+        player_board[player_row][player_col] = "-"
         comp_score += 1
         print(score_message)
     else:
