@@ -23,7 +23,6 @@ def print_computer_board(board):
 
 # scoring
 your_score = 0
-
 comp_score = 0
 score_message = (f"Your score: {your_score} " f" Computer's score: {comp_score} ")
 
@@ -57,9 +56,10 @@ for x in range(3):
 # print(score_message)
 
 # code to add battleships to computer board
+for x in range(3):
+    ship_row = random_row(board)
+    ship_col = random_column(board)
 
-ship_row = random_row(board)
-ship_col = random_column(board)
 
 # code to count number of turns, invite user input, validate user input and give outcomes
 for turn in range(9):
@@ -91,7 +91,7 @@ for turn in range(9):
     else:
         print("Nice try! You missed my battleship!")
         board[guess_row][guess_column] = "X"
-        # print(f"My ship was at {ship_row, ship_col}.")
+       # print(f"My ship was at {ship_row, ship_col}.")
 
     # code to enable computer guess
     computer_guess_row = randint(0, 5)
