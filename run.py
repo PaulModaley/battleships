@@ -89,7 +89,7 @@ for turn in range(9):
     if guess_row == ship_row and guess_column == ship_col:
         print("Direct hit! You sank my battleship!")
         your_score += 1
-        score_message = (f"Your score: {your_score} " f" Computer's score: {comp_score} ")
+        score_message = (f"Your score: {your_score} Computer's score: {comp_score} ")
         print(score_message)
     else:
         print("Nice try! You missed my battleship!")
@@ -101,16 +101,23 @@ for turn in range(9):
     computer_guess_column = randint(1, 5)
     print(f"Computer guessed: {computer_guess_row, computer_guess_column}")
     # outcome of computer's guess
-    if computer_guess_row == player_row and computer_guess_column == player_col:
+    if computer_guess_row == player_row \
+        and computer_guess_column == player_col:
         print("Ha ha! Bow to me, human! I sunk your battleship")
         player_board[player_row][player_col] = "-"
         comp_score += 1
-        score_message = (f"Your score: {your_score} " f" Computer's score: {comp_score} ")
+        score_message = (
+            f"Your score: {your_score} Computer's score: {comp_score} "
+        )
         print(score_message)
     else:
         print("You're lucky I missed, human!")
     if turn == 8 or (comp_score == 3 and your_score < 3):
         print("Game Over")
     turn = 1
-    if your_score == 3 and comp_score < 3:
+    if your_score == 3:
         print("You win!")
+        break
+    if comp_score == 3:
+        print("You lose!")
+        break
