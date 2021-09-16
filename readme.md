@@ -105,7 +105,16 @@ If the user is unable to guess the computer's coordinates within 8 turns, the co
 
 ## 4. Testing
 
-PEP8 Online was used to check the code for errors. In addition to using PEP8, I frequently ran the program in GitPod after making changes to ensure the program functioned as intended.
+PEP8 Online was used to check the code for errors. In addition to using PEP8, I frequently ran the program in GitPod after making changes to ensure the program functioned as intended. Specific aspects of the code I tested were:
+
+- Scoring system
+  - I printed out the computer's battleship positions so that a correct guess would be easy. Then, I entered the coordinates supplied to see whether or not the score would increment.
+
+- Turn counting
+  - I ran the code and played the game in the terminal until 8 turns were reached. The code printed out 'game over' so I knew the turn counting system was working correctly.
+
+- Player and computer success messages
+  - This was tested by playing the game to see what would occur upon a correct or incorrect guess given by the user or the computer.
 
 ## 5. Development Cycle
 
@@ -120,8 +129,6 @@ There were three main stages to developing this game.
    During this stage, I added input validation systems and wrote code to allow the user to input their name. I also began implementing a scoring system and a turn counting system.
 
 3. **Debugging and Testing:**
-
-   Here, I sought solutions for issues in the code including fixing the scoring system so that it would increment correctly. 
 
    Throughout all stages, I tested my code by running the programme in my local terminal to check the outcome. Final tests were carried out using PEP8 Online. 
 

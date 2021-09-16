@@ -48,10 +48,6 @@ for x in range(3):
 
     player_board[player_row][player_col] = "@"
 
-
-# print_board(player_board)
-# print(score_message)
-
 # code to add battleships to computer board
 for x in range(3):
     ship_row = random_row(board)
@@ -75,7 +71,8 @@ for turn in range(9):
         try:
             guess_row = int(input("Guess row (Enter number 1-5): "))
             guess_column = int(input("Guess column (Enter number 1-5): "))
-            if guess_row in [1, 2, 3, 4, 5] and guess_column in [1, 2, 3, 4, 5]:
+            if guess_row in [1, 2, 3, 4, 5] \
+                    and guess_column in [1, 2, 3, 4, 5]:
                 guess_row = guess_row - 1
                 guess_column = guess_column - 1
                 break
@@ -104,7 +101,7 @@ for turn in range(9):
     print(f"Computer guessed: {computer_guess_row, computer_guess_column}")
     # outcome of computer's guess
     if computer_guess_row == player_row \
-        and computer_guess_column == player_col:
+            and computer_guess_column == player_col:
         print("Ha ha! Bow to me, human! I sunk your battleship")
         player_board[player_row][player_col] = "-"
         comp_score += 1
