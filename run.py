@@ -53,7 +53,7 @@ for x in range(3):
     ship_row = random_row(board)
     ship_col = random_column(board)
 
-    board[ship_row][ship_col] = "@"
+    board[ship_row][ship_col]
 
 
 """code to count number of turns, invite user input
