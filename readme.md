@@ -26,11 +26,9 @@
 
   - 6. Deployment
 
-  - 7. End Product
+  - 7. Known Bugs
 
-  - 8. Known Bugs
-
-  - 9. Credits
+  - 8. Credits
 
   ## 1.1 Strategy
   [Back to top](#table-of-contents)
@@ -144,15 +142,18 @@
 
   ## 6. Deployment
 
-  This Battleships game was deployed through Heroku.
+  This Battleships game was deployed through Heroku. The steps for deployment are as follows:
+  - Create a new Heroku app
+  - Add Python buildpack
+  - Add Node buildpack
+  - Link the Heroku app to the Battleships repository
+  - Select deploy
 
-  ## 7. End Product
-
-  ## 8. Known Bugs
+  ## 7. Known Bugs
 
   There are no known bugs remaining.
 
-  ## 9. Credits
+  ## 8. Credits
 
   - The code to generate the board and to enable a guess from the user came from [Guimaion on GitHub](https://gist.github.com/guimaion/9275543).
   - The code to count the number of turns in the game came from [Trinket](https://trinket.io/python/051179b6d3).
