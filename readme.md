@@ -84,7 +84,7 @@ If the user is unable to guess the computer's coordinates within 8 turns, the co
 - Conditional statements
   - If and else statements are used to determine what happens based on user inputs or game events.
 - Scoring and turn counting
-  - Variables for scoring and for counting the turns a player takes are present in the code. Operators are used to increment these variables accordingly. Once a player reaches 8 turns or the player or the computer reaches 3 points, the game is over.
+  - Variables for scoring and for counting the turns a player takes are present in the code. Operators are used to increment these variables accordingly. Once a player reaches 8 turns, the game is over.
 
 ### Future Features
 
