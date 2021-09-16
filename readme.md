@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Based on the traditional pencil and paper game, this version is a Python terminal game. It runs in Heroku which is Code Institute's mock terminal.
+Based on the traditional pencil and paper game, this version is a Python terminal game which runs in Heroku.
 
 ## [Table of Contents](#1-ux)
 
@@ -14,17 +14,17 @@ Based on the traditional pencil and paper game, this version is a Python termina
       - User Expectation
   - 1.2 How to Play
 
-- 2. [Features](##2.Features)
+- 2. [Features](##2. Features)
      - Existing features
      - Future features
 
-- 3. [Technologies Used](##3.Technologies Used)
+- 3. [Technologies Used](##3. Technologies Used)
 
-- 4. [Testing](##4.Testing)
+- 4. [Testing](##4. Testing)
 
-- 5. [Development Cycle](##5.Development Cycle)
+- 5. [Development Cycle](##5. Development Cycle)
 
-- 6. [Deployment](##6.Deployment)
+- 6. [Deployment](##6. Deployment)
 
 - 7. [End Product](##End Product)
 
@@ -83,12 +83,15 @@ If the user is unable to guess the computer's coordinates within 8 turns, the co
   - For loops are also used as part of the code to generate boards.
 - Conditional statements
   - If and else statements are used to determine what happens based on user inputs or game events.
+- Scoring and turn counting
+  - Variables for scoring and for counting the turns a player takes are present in the code. Operators are used to increment these variables accordingly. Once a player reaches 8 turns or the player or the computer reaches 3 points, the game is over.
 
 ### Future Features
 
 - Enable players to choose the size of the game board
-- Allow for more than one ship to be placed on the game boards
+- Allow players to choose where to place their ships on their game board
 - Have ships of differing sizes
+- Revealing the positions of undiscovered battleships at the 'game over' screen
 
 ## 3. Technologies Used
 [Back to top](#table-of-contents)
@@ -106,15 +109,35 @@ PEP8 Online was used to check the code for errors. In addition to using PEP8, I 
 
 ## 5. Development Cycle
 
+There were three main stages to developing this game.
+
+1. **Set up:**
+
+   This stage involved setting up the game board and generating random coordinates to play battleships on the board. During this stage, I also wrote code to enable the user and the computer to guess the opponents position.
+
+2. **Adding additional features:**
+
+   During this stage, I added input validation systems and wrote code to allow the user to input their name. I also began implementing a scoring system and a turn counting system.
+
+3. **Debugging and Testing:**
+
+   Here, I sought solutions for issues in the code including fixing the scoring system so that it would increment correctly. 
+
+   Throughout all stages, I tested my code by running the programme in my local terminal to check the outcome. Final tests were carried out using PEP8 Online. 
+
 ## 6. Deployment
+
+This Battleships game was deployed through Heroku.
 
 ## 7. End Product
 
 ## 8. Known Bugs
 
+There are no known bugs remaining.
+
 ## 9. Credits
 
 - The code to generate the board and to enable a guess from the user came from [Guimaion on GitHub](https://gist.github.com/guimaion/9275543).
-
 - The code to count the number of turns in the game came from [Trinket](https://trinket.io/python/051179b6d3).
+
 

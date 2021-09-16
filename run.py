@@ -110,6 +110,8 @@ for turn in range(9):
         print(score_message)
     else:
         print("You're lucky I missed, human!")
-    if turn == 8:
+    if turn == 8 or comp_score == 3 and your_score < 3:
         print("Game Over")
     turn = 1
+    if your_score == 3 and comp_score < 3:
+        print("You win!")
