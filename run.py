@@ -65,8 +65,6 @@ for turn in range(9):
     print_board(player_board)
     print(score_message)
 
-    print("SHIP ROW: ", ship_row)
-    print("SHIP COLUMN: ", ship_col)
     while True:
         try:
             guess_row = int(input("Guess row (Enter number 1-5): "))
