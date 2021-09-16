@@ -140,6 +140,8 @@
 
      Throughout all stages, I tested my code by running the programme in my local terminal to check the outcome. Final tests were carried out using PEP8 Online. 
 
+     ![](images_for_readme/pep8.png)
+
   ## 6. Deployment
 
   This Battleships game was deployed through Heroku. The steps for deployment are as follows:
