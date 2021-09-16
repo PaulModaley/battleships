@@ -4,10 +4,6 @@ import logging
 # welcome message
 print("Welcome to Battleships.")
 username = input("What is your name? ")
-# print("Username is: " + username)
-
-# set up game board
-# print("Computer")
 board = []
 
 for x in range(5):
@@ -18,13 +14,12 @@ def print_computer_board(board):
     for i in board:
         print((" ").join(i))
 
-
-# print_computer_board(board)
-
 # scoring
 your_score = 0
 comp_score = 0
-score_message = (f"Your score: {your_score} " f" Computer's score: {comp_score} ")
+score_message = (
+    f"Your score: {your_score}  Computer's score: {comp_score} "
+)
 
 
 # set up human player board and add battleships to player board
@@ -46,22 +41,27 @@ def random_row(player_board):
 def random_column(player_board):
     return randint(0, len(player_board) - 1)
 
+
 for x in range(3):
     player_row = random_row(board)
     player_col = random_column(board)
 
     player_board[player_row][player_col] = "@"
 
+
 # print_board(player_board)
 # print(score_message)
 
 # code to add battleships to computer board
-# for x in range(3):
+for x in range(3):
     ship_row = random_row(board)
     ship_col = random_column(board)
 
+    board[ship_row][ship_col] = "@"
 
-# code to count number of turns, invite user input, validate user input and give outcomes
+
+"""code to count number of turns, invite user input
+validate user input and give outcomes"""
 for turn in range(9):
     print("Computer")
     print_computer_board(board)
@@ -87,14 +87,16 @@ for turn in range(9):
             continue
 
     if guess_row == ship_row and guess_column == ship_col:
+        board[guess_row][guess_column] = "!"
         print("Direct hit! You sank my battleship!")
         your_score += 1
-        score_message = (f"Your score: {your_score} Computer's score: {comp_score} ")
+        score_message = (
+            f"Your score: {your_score} Computer's score: {comp_score} "
+        )
         print(score_message)
     else:
         print("Nice try! You missed my battleship!")
         board[guess_row][guess_column] = "X"
-       # print(f"My ship was at {ship_row, ship_col}.")
 
     # code to enable computer guess
     computer_guess_row = randint(1, 5)
