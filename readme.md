@@ -70,7 +70,7 @@
     
     - The computer's ships are hidden from the player (and vice versa).
     
-      ![](C:\Users\Paul Modaley\Downloads\game screen1.png)
+      ![](images_for_readme/gamescreen1.png)
   - Single player mode
     -  The player can play against the computer.
     - The game accepts input from the user.
@@ -80,7 +80,7 @@
     
     - The computer prints messages for the player depending on certain outcomes within the game.
     
-      ![](C:\Users\Paul Modaley\Downloads\gamescreen2.png)
+      ![](images_for_readme/gamescreen2.png)
   - Data
     - Lists used to store and process data
   - Functions
@@ -92,9 +92,9 @@
   - Scoring and turn counting
     - Variables for scoring and for counting the turns a player takes are present in the code. Operators are used to increment these variables accordingly. Once a player reaches 8 turns, the game is over.
     
-      ![](C:\Users\Paul Modaley\Downloads\game screen 3.png)
+      ![](images_for_readme/gamescreen3.png)
 
-  ![](C:\Users\Paul Modaley\Downloads\gamescreen4.png)
+  ![](images_for_readme/gamescreen4.png)
 
   ### Future Features
 
