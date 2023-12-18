@@ -4,6 +4,8 @@
 
   Based on the traditional pencil and paper game, this version is a Python terminal game which runs in Heroku.
 
+  Click [this link](https://paulmodaley-battleships.herokuapp.com/) to play.
+
   ## [Table of Contents](#1-ux)
 
   - 1. UX
